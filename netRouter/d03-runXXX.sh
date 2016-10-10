@@ -20,7 +20,9 @@ echo DD=$DD
 # -it --rm
 # --net=none \
 
+xmkdir "$DRH/tst"
 xmkdir "$DD"
+xmkdir "$DD/www-data"
 touch "$DD/bash_history"
 
 docker run \
@@ -28,6 +30,8 @@ docker run \
     --privileged \
     -h router$NO \
     --name router$NO \
-    -v $DD:/host \
-    -v $DD/bash_history:/root/.bash_history \
+    -v "$DD:/host" \
+    -v "$DRH/tst:/tst" \
+    -v "$DD/www-data:/var/www-data" \
+    -v "$DD/bash_history:/root/.bash_history" \
     router

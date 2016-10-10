@@ -11,7 +11,8 @@ if [ "x$NO" = "x" ]; then
     NO=$NAM
 fi
 
-DD=$HOME/.dockerRouter/$NO
+DRH=$HOME/.dockerRouter
+DD=$DRH/$NO
 DNAME=router$NO
 
 HPFX=outer
