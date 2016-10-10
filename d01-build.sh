@@ -1,5 +1,5 @@
 #!/bin/bash
 
 docker build \
-    -t test01 \
+    -t router \
     .

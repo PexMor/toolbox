@@ -35,3 +35,9 @@ openssl
 less
 jq
 build-essential
+ntpdate
+libxml2-utils
+highlight
+python-sleekxmpp
+python3-sleekxmpp
+libpjsua2

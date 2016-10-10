@@ -6,13 +6,13 @@ VOLS="-v /sys/fs/cgroup:/sys/fs/cgroup:ro"
 OPTS="--cap-add SYS_ADMIN --security-opt seccomp=unconfined"
 # OPTS="--privileged"
 
+# -it --rm
 sudo docker run \
-    -it \
-    --rm \
+    -d \
     $VOLS \
     $OPTS \
-    -h test01 \
-    --name test01 \
-    test01 \
+    -h router200 \
+    --name router200 \
+    router
 
 #    systemd.unit=emergency.service

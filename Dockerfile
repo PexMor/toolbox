@@ -21,6 +21,7 @@ ADD 01-base.sh /root/
 ADD 02-add.sh /root/
 ADD 03-fixSystemd.sh /root/
 ADD packages2install.txt /root/
+ADD netRouter /root/netRouter/
 
 RUN chmod +x /root/*.sh
 RUN bash -C /root/01-base.sh 1>&2
