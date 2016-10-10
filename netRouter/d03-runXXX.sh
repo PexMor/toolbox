@@ -25,6 +25,21 @@ xmkdir "$DD"
 xmkdir "$DD/www-data"
 touch "$DD/bash_history"
 
+# docker image name
+CFG="$DRH/whichImage"
+echo "CFG=$CFG"
+
+if [ -f "$CFG" ]; then
+    source "$CFG"
+    if [ "x$DIN" = "x" ]; then
+        exit -1
+    fi
+else
+    DIN=router
+fi
+
+echo "DIN(Docker Image Name)=$DIN"
+
 docker run \
     -d \
     --privileged \
@@ -34,4 +49,4 @@ docker run \
     -v "$DRH/tst:/tst" \
     -v "$DD/www-data:/var/www-data" \
     -v "$DD/bash_history:/root/.bash_history" \
-    router
+    $DIN

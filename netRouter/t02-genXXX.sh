@@ -32,6 +32,6 @@ else
     NTPSRV=$1
 fi
 
-echo "ntpdate -dqu $NTPSRV"
+echo "execute inside docker='$DNAME' CMD='$CMD'"
 
 sudo docker exec -it --privileged $DNAME /bin/bash -x -c "$CMD"
