@@ -41,3 +41,4 @@ highlight
 python-sleekxmpp
 python3-sleekxmpp
 libpjsua2
+byobu
