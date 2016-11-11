@@ -20,6 +20,8 @@ ADD 00-colors.sh /root/
 ADD 01-base.sh /root/
 ADD 02-add.sh /root/
 ADD 03-fixSystemd.sh /root/
+ADD 04-sipp.sh /root/
+ADD 05-pjsip.sh /root/
 ADD packages2install.txt /root/
 ADD netRouter /root/netRouter/
 
@@ -27,6 +29,8 @@ RUN chmod +x /root/*.sh
 RUN bash -C /root/01-base.sh 1>&2
 RUN bash -C /root/02-add.sh 1>&2
 RUN bash -C /root/03-fixSystemd.sh 1>&2
+RUN bash -C /root/04-sipp.sh 1>&2
+RUN bash -C /root/05-pjsip.sh 1>&2
 
 RUN systemctl enable apache2.service
 RUN systemctl enable beanstalkd.service
