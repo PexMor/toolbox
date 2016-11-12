@@ -52,3 +52,5 @@ libpcap-dev
 libncurses5-dev
 libsctp-dev
 lksctp-tools
+gsl-bin
+libgsl-dev
