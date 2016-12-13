@@ -41,3 +41,16 @@ highlight
 python-sleekxmpp
 python3-sleekxmpp
 libpjsua2
+byobu
+software-properties-common
+python-software-properties
+git
+dh-autoreconf
+ncurses-dev
+libssl-dev
+libpcap-dev
+libncurses5-dev
+libsctp-dev
+lksctp-tools
+gsl-bin
+libgsl-dev
